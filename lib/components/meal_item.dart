@@ -19,6 +19,8 @@ class MealItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
+        elevation: 4,
+        margin: const EdgeInsets.all(10),
         child: Text(meal.title),
       ),
     );
