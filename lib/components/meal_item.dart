@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_meals/models/meal.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({Key key}) : super(key: key);
+  final Meal meal;
+
+  const MealItem(
+    this.meal, {
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Card(
+      child: Text(meal.title),
+    );
   }
 }
