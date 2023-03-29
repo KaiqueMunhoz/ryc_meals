@@ -9,6 +9,9 @@ class CategoriesMealsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Receitas'),
       ),
+      body: Center(
+        child: Text('Receitas por Categoria'),
+      ),
     );
   }
 }
