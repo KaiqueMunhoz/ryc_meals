@@ -63,6 +63,7 @@ class MealItem extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Row(
                     children: <Widget>[
