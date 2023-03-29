@@ -9,10 +9,15 @@ class MealItem extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  void _selectMeal() {}
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Text(meal.title),
+    return InkWell(
+      onTap: _selectMeal,
+      child: Card(
+        child: Text(meal.title),
+      ),
     );
   }
 }
