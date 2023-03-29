@@ -27,7 +27,7 @@ class Meal {
   final Complexity complexity;
   final Cost cost;
 
-  Meal({
+  const Meal({
     @required this.id,
     @required this.categories,
     @required this.title,
