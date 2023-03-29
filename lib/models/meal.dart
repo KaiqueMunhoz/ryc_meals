@@ -6,6 +6,12 @@ enum Complexity {
   Difficult,
 }
 
+enum Cost {
+  Cheap,
+  Fair,
+  Expensive,
+}
+
 class Meal {
   final String id;
   final List<String> categories;
