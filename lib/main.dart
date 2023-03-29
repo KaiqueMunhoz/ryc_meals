@@ -11,6 +11,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6:
+                  TextStyle(fontSize: 20.0, fontFamily: 'RobotoCondensed'),
+            ),
       ),
       home: CategoriesScreen(),
     );
