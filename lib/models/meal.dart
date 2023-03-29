@@ -1,5 +1,11 @@
 import 'package:flutter/foundation.dart';
 
+enum Complexity {
+  Simple,
+  Medium,
+  Difficult,
+}
+
 class Meal {
   final String id;
   final List<String> categories;
