@@ -9,10 +9,12 @@ class CategoryItem extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
+  void _selectCategory(BuildContext context) {}
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => _selectCategory(context),
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15.0),
       child: Container(
