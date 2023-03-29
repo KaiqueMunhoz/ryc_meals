@@ -20,6 +20,8 @@ class CategoryItem extends StatelessWidget {
               category.color.withOpacity(0.5),
               category.color,
             ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
         ),
       ),
