@@ -12,6 +12,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {},
       borderRadius: BorderRadius.circular(15.0),
       child: Container(
         child: Container(
