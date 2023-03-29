@@ -21,7 +21,20 @@ class MealItem extends StatelessWidget {
         ),
         elevation: 4,
         margin: const EdgeInsets.all(10),
-        child: Text(meal.title),
+        child: Column(
+          children: <Widget>[
+            Stack(
+              children: <Widget>[
+                Image.network(
+                  meal.imageUrl,
+                  height: 250,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
