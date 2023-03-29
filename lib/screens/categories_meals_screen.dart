@@ -22,7 +22,8 @@ class CategoriesMealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: categoryMeals.length,
         itemBuilder: (_, index) {
-          return Text('Receitas por Categoria ${category.id}');
+          final String _title = categoryMeals[index].title;
+          return Text(_title);
         },
       ),
     );
