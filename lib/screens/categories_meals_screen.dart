@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_meals/models/category.dart';
 
 class CategoriesMealsScreen extends StatelessWidget {
-  const CategoriesMealsScreen({Key key}) : super(key: key);
+  final Category category;
+
+  const CategoriesMealsScreen(
+    this.category, {
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
