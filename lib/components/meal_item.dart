@@ -25,11 +25,17 @@ class MealItem extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: <Widget>[
-                Image.network(
-                  meal.imageUrl,
-                  height: 250,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
+                  ),
+                  child: Image.network(
+                    meal.imageUrl,
+                    height: 250,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
                 )
               ],
             )
