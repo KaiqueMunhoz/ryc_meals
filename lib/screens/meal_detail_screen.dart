@@ -16,9 +16,11 @@ class MealDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _createSectionContainer({Widget child}) {
+  Widget _createSectionContainer(BuildContext context, {Widget child}) {
+    final double _totalWidth = MediaQuery.of(context).size.width;
+
     return Container(
-      width: 200,
+      width: _totalWidth - 30,
       height: 300,
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.all(10),
@@ -52,6 +54,7 @@ class MealDetailScreen extends StatelessWidget {
             ),
             _createSectionTitle(context, 'Ingredientes'),
             _createSectionContainer(
+              context,
               child: ListView.builder(
                 itemCount: _meal.ingredients.length,
                 itemBuilder: (_, index) {
@@ -70,6 +73,7 @@ class MealDetailScreen extends StatelessWidget {
             ),
             _createSectionTitle(context, 'Passos'),
             _createSectionContainer(
+              context,
               child: ListView.builder(
                 itemCount: _meal.steps.length,
                 itemBuilder: (_, index) {
