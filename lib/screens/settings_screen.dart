@@ -56,7 +56,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       },
                     );
                   },
-                )
+                ),
+                _createSwitch(
+                  title: 'Sem Lactose',
+                  subtitle: 'Só exibe refeições sem lactose',
+                  value: settings.isLactoseFree,
+                  onChanged: (bool _isLactoseFree) {
+                    setState(
+                      () {
+                        settings.isLactoseFree = _isLactoseFree;
+                      },
+                    );
+                  },
+                ),
               ],
             ),
           )
