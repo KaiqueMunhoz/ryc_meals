@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ryc_meals/components/main_drawer.dart';
+import 'package:ryc_meals/models/settings.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key key}) : super(key: key);
@@ -9,6 +10,8 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  Settings settings = Settings();
+
   Widget _createSwitch(
     String title,
     String subtitle,
@@ -39,6 +42,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
               style: Theme.of(context).textTheme.headline6,
             ),
           ),
+          Expanded(
+            child: ListView(
+              children: [],
+            ),
+          )
         ],
       ),
     );
