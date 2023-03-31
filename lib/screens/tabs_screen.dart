@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ryc_meals/components/main_drawer.dart';
+import 'package:ryc_meals/models/meal.dart';
 import 'package:ryc_meals/screens/categories_screen.dart';
 import 'package:ryc_meals/screens/favorite_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({Key key}) : super(key: key);
+  final List<Meal> favoriteMeals;
+  const TabsScreen(this.favoriteMeals, {Key key}) : super(key: key);
 
   @override
   _TabsScreenState createState() => _TabsScreenState();
