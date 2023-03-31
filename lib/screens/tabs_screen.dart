@@ -10,6 +10,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+  int _selectedScreenIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
