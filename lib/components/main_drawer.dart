@@ -39,7 +39,8 @@ class MainDrawer extends StatelessWidget {
                 color: Theme.of(context).primaryColor,
               ),
             ),
-          )
+          ),
+          _createItem(Icons.restaurant, 'Refeições'),
         ],
       ),
     );
