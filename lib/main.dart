@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
         AppRoutes.CATEGORIES_MEALS: (_) =>
             CategoriesMealsScreen(_availableMeals),
         AppRoutes.MEAL_DETAIL: (_) => const MealDetailScreen(),
-        AppRoutes.SETTINGS: (_) => SettingsScreen(_filterMeals),
+        AppRoutes.SETTINGS: (_) => SettingsScreen(settings, _filterMeals),
       },
     );
   }
