@@ -8,10 +8,13 @@ class FavoriteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Minhas Refeições Favoritas',
-      ),
-    );
+    if (favoriteMeals.isEmpty) {
+      return Center(
+        child: Text(
+          'Nenhuma refeição foi marcada como favorita!',
+        ),
+      );
+    }
+    return Container();
   }
 }
