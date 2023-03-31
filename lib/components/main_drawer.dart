@@ -40,6 +40,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20),
           _createItem(Icons.restaurant, 'Refeições'),
         ],
       ),
