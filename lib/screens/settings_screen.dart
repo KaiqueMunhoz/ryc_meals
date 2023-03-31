@@ -24,7 +24,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
       title: Text(title),
       subtitle: Text(subtitle),
       value: value,
-      onChanged: onChanged,
+      onChanged: (bool _hasValue) {
+        onChanged(_hasValue);
+      },
     );
   }
 
