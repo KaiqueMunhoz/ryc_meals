@@ -24,7 +24,7 @@ class MealDetailScreen extends StatelessWidget {
 
     return Container(
       width: _totalWidth - 30,
-      height: 300,
+      height: 250,
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
