@@ -10,17 +10,17 @@ class TabsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Vamos Cozinhar?'),
+          bottom: TabBar(tabs: [
+            Tab(
+              icon: Icon(Icons.category),
+              text: 'Categorias',
+            ),
+            Tab(
+              icon: Icon(Icons.star),
+              text: 'Favoritos',
+            ),
+          ]),
         ),
-        body: TabBar(tabs: [
-          Tab(
-            icon: Icon(Icons.category),
-            text: 'Categorias',
-          ),
-          Tab(
-            icon: Icon(Icons.star),
-            text: 'Favoritos',
-          ),
-        ]),
       ),
     );
   }
