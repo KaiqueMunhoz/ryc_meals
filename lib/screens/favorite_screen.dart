@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_meals/components/meal_item.dart';
 import 'package:ryc_meals/models/meal.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -15,6 +16,11 @@ class FavoriteScreen extends StatelessWidget {
         ),
       );
     }
-    return Container();
+    return ListView.builder(
+      itemCount: favoriteMeals.length,
+      itemBuilder: (_, index) {
+        return MealItem(favoriteMeals[index]);
+      },
+    );
   }
 }
