@@ -16,6 +16,10 @@ class TabsScreen extends StatelessWidget {
             icon: Icon(Icons.category),
             text: 'Categorias',
           ),
+          Tab(
+            icon: Icon(Icons.star),
+            text: 'Favoritos',
+          ),
         ]),
       ),
     );
