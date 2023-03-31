@@ -11,6 +11,12 @@ class TabsScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text('Vamos Cozinhar?'),
         ),
+        body: TabBar(tabs: [
+          Tab(
+            icon: Icon(Icons.category),
+            text: 'Categorias',
+          ),
+        ]),
       ),
     );
   }
