@@ -16,6 +16,12 @@ class _TabsScreenState extends State<TabsScreen> {
     1: const FavoriteScreen(),
   };
 
+  void _selectScreen(int index) {
+    setState(() {
+      _selectedScreenIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
