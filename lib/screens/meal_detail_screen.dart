@@ -68,6 +68,7 @@ class MealDetailScreen extends StatelessWidget {
                 },
               ),
             ),
+            _createSectionTitle(context, 'Passos'),
           ],
         ),
       ),
