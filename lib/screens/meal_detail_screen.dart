@@ -16,7 +16,10 @@ class MealDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _createSectionContainer(BuildContext context, {Widget child}) {
+  Widget _createSectionContainer(
+    BuildContext context, {
+    Widget child,
+  }) {
     final double _totalWidth = MediaQuery.of(context).size.width;
 
     return Container(
