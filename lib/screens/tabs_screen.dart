@@ -12,6 +12,18 @@ class TabsScreen extends StatelessWidget {
         title: Text('Vamos Cozinhar?'),
       ),
       body: Center(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            title: Text('Categorias'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            title: Text('Favoritos'),
+          ),
+        ],
+      ),
     );
   }
 }
