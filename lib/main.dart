@@ -18,7 +18,24 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   List<Meal> _availableMeals = DUMMY_MEALS;
 
-  void _filterMeals(Settings settings) {}
+  void _filterMeals(Settings settings) {
+    setState(() {
+      _availableMeals = DUMMY_MEALS.where((Meal meal) {
+        final _isAMealWithoutGluten =
+            settings.isGlutenFree && !meal.isGlutenFree;
+        final _isAMealWithoutLactose =
+            settings.isLactoseFree && !meal.isLactoseFree;
+        final _isNotAMealVegan = settings.isVegan && !meal.isVegan;
+        final _isNotAMealVegetarian =
+            settings.isVegetarian && !meal.isVegetarian;
+
+        return !_isAMealWithoutGluten &&
+            !_isAMealWithoutLactose &&
+            !_isNotAMealVegan &&
+            !_isNotAMealVegetarian;
+      }).toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
