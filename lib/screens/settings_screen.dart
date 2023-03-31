@@ -69,6 +69,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     );
                   },
                 ),
+                _createSwitch(
+                  title: 'Vegana',
+                  subtitle: 'Só exibe refeições veganas!',
+                  value: settings.isVegan,
+                  onChanged: (bool _isVegan) {
+                    setState(
+                      () {
+                        settings.isVegan = _isVegan;
+                      },
+                    );
+                  },
+                ),
               ],
             ),
           )
