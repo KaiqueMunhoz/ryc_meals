@@ -26,7 +26,7 @@ class _TabsScreenState extends State<TabsScreen> {
       },
       {
         'title': 'Meus Favoritos',
-        'screen': const FavoriteScreen(),
+        'screen': FavoriteScreen(widget.favoriteMeals),
       }
     ];
   }
