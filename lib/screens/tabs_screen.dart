@@ -11,10 +11,10 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedScreenIndex = 0;
-  final Map<int, StatelessWidget> _screens = {
-    0: const CategoriesScreen(),
-    1: const FavoriteScreen(),
-  };
+  final List<Widget> _screens = [
+    const CategoriesScreen(),
+    const FavoriteScreen(),
+  ];
 
   void _selectScreen(int index) {
     setState(() {
