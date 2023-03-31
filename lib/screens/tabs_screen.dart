@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ryc_meals/screens/categories_screen.dart';
 import 'package:ryc_meals/screens/favorite_screen.dart';
 
-class TabsScreen extends StatelessWidget {
+class TabsScreen extends StatefulWidget {
   const TabsScreen({Key key}) : super(key: key);
 
+  @override
+  _TabsScreenState createState() => _TabsScreenState();
+}
+
+class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +18,7 @@ class TabsScreen extends StatelessWidget {
       ),
       body: Center(),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Theme.of(context).primaryColor,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
