@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_meals/data/dummy_data.dart';
+import 'package:ryc_meals/models/meal.dart';
 import 'package:ryc_meals/screens/categories_meals_screen.dart';
 import 'package:ryc_meals/screens/meal_detail_screen.dart';
 import 'package:ryc_meals/screens/settings_screen.dart';
@@ -13,6 +15,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  List<Meal> _availableMeals = DUMMY_MEALS;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
