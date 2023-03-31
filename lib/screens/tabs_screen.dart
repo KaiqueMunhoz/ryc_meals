@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_meals/screens/categories_screen.dart';
+import 'package:ryc_meals/screens/favorite_screen.dart';
 
 class TabsScreen extends StatelessWidget {
   const TabsScreen({Key key}) : super(key: key);
@@ -10,16 +12,24 @@ class TabsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Vamos Cozinhar?'),
-          bottom: TabBar(tabs: [
-            Tab(
-              icon: Icon(Icons.category),
-              text: 'Categorias',
-            ),
-            Tab(
-              icon: Icon(Icons.star),
-              text: 'Favoritos',
-            ),
-          ]),
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.category),
+                text: 'Categorias',
+              ),
+              Tab(
+                icon: Icon(Icons.star),
+                text: 'Favoritos',
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            const CategoriesScreen(),
+            const FavoriteScreen(),
+          ],
         ),
       ),
     );
