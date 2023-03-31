@@ -3,7 +3,9 @@ import 'package:ryc_meals/components/main_drawer.dart';
 import 'package:ryc_meals/models/settings.dart';
 
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({Key key}) : super(key: key);
+  final Function(Settings settings) onSettingsChanged;
+
+  const SettingsScreen(this.onSettingsChanged, {Key key}) : super(key: key);
 
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
