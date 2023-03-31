@@ -69,6 +69,18 @@ class MealDetailScreen extends StatelessWidget {
               ),
             ),
             _createSectionTitle(context, 'Passos'),
+            _createSectionContainer(
+              child: ListView.builder(
+                itemCount: _meal.steps.length,
+                itemBuilder: (_, index) {
+                  return ListTile(
+                    leading: CircleAvatar(
+                      child: Text('${index + 1}'),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
