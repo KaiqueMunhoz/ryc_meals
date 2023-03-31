@@ -25,8 +25,16 @@ class SettingsScreen extends StatelessWidget {
         title: Text('Configurações'),
       ),
       drawer: MainDrawer(),
-      body: Center(
-        child: Text('Configurações!'),
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              'Configurações',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+          )
+        ],
       ),
     );
   }
