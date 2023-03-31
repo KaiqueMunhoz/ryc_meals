@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ryc_meals/components/meal_item.dart';
 import 'package:ryc_meals/models/meal.dart';
 
 class MealDetailScreen extends StatelessWidget {
   const MealDetailScreen({
     Key key,
   }) : super(key: key);
+
+  Widget _createSectionTitle(BuildContext context, String title) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0),
+      child: Text(
+        title,
+        style: Theme.of(context).textTheme.headline6,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +34,7 @@ class MealDetailScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0),
-            child: Text(
-              'Ingredientes',
-              style: Theme.of(context).textTheme.headline6,
-            ),
-          ),
+          _createSectionTitle(context, 'Ingredientes'),
           Container(
             width: 200,
             height: 300,
