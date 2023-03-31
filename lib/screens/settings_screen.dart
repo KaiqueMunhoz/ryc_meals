@@ -18,7 +18,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     @required String title,
     @required String subtitle,
     @required bool value,
-    @required Function onChanged,
+    @required Function(bool) onChanged,
   }) {
     return SwitchListTile(
       title: Text(title),
