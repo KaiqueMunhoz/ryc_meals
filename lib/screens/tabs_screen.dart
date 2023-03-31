@@ -30,6 +30,7 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       body: Center(),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: _selectScreen,
         backgroundColor: Theme.of(context).primaryColor,
         items: [
           BottomNavigationBarItem(
