@@ -17,7 +17,11 @@ class MealItem extends StatelessWidget {
       arguments: meal,
     )
         .then((result) {
-      print("result ${result}");
+      if (result == null) {
+        print("Sem resultado!");
+      } else {
+        print("O nome da refeição é ${result}");
+      }
     });
   }
 
