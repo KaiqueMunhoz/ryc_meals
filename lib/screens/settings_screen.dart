@@ -12,12 +12,12 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   Settings settings = Settings();
 
-  Widget _createSwitch(
-    String title,
-    String subtitle,
-    bool value,
-    Function onChanged,
-  ) {
+  Widget _createSwitch({
+    @required String title,
+    @required String subtitle,
+    @required bool value,
+    @required Function onChanged,
+  }) {
     return SwitchListTile(
       title: Text(title),
       subtitle: Text(subtitle),
