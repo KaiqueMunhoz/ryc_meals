@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ryc_meals/components/main_drawer.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key key}) : super(key: key);
 
+  @override
+  _SettingsScreenState createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
   Widget _createSwitch(
     String title,
     String subtitle,
@@ -33,7 +38,7 @@ class SettingsScreen extends StatelessWidget {
               'Configurações',
               style: Theme.of(context).textTheme.headline6,
             ),
-          )
+          ),
         ],
       ),
     );
