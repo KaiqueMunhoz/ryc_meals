@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
 
   void _toggleFavorite(Meal meal) {
     setState(() {
-      _favoriteMeals.contains(meal)
+      _isFavorite(meal)
           ? _favoriteMeals.remove(meal)
           : _favoriteMeals.add(meal);
     });
