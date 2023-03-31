@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         AppRoutes.HOME: (_) => const TabsScreen(),
-        AppRoutes.CATEGORIES_MEALS: (_) => CategoriesMealsScreen(),
-        AppRoutes.MEAL_DETAIL: (_) => MealDetailScreen(),
+        AppRoutes.CATEGORIES_MEALS: (_) => const CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (_) => const MealDetailScreen(),
         AppRoutes.SETTINGS: (_) => const SettingsScreen(),
       },
     );
