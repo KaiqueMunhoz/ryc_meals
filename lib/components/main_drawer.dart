@@ -5,6 +5,14 @@ class MainDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Drawer(
+      child: Column(
+        children: [
+          Container(
+            child: Text('Vamos Cozinhar'),
+          )
+        ],
+      ),
+    );
   }
 }
