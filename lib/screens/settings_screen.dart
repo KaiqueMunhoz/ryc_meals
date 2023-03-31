@@ -26,6 +26,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       value: value,
       onChanged: (bool _hasValue) {
         onChanged(_hasValue);
+        widget.onSettingsChanged(settings);
       },
     );
   }
