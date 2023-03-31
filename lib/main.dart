@@ -21,18 +21,18 @@ class _MyAppState extends State<MyApp> {
   void _filterMeals(Settings settings) {
     setState(() {
       _availableMeals = DUMMY_MEALS.where((Meal meal) {
-        final _isAMealWithoutGluten =
-            settings.isGlutenFree && !meal.isGlutenFree;
-        final _isAMealWithoutLactose =
-            settings.isLactoseFree && !meal.isLactoseFree;
-        final _isNotAMealVegan = settings.isVegan && !meal.isVegan;
-        final _isNotAMealVegetarian =
-            settings.isVegetarian && !meal.isVegetarian;
+        final _isAMealWithGluten =
+            !(settings.isGlutenFree && !meal.isGlutenFree);
+        final _isAMealWithLactose =
+            !(settings.isLactoseFree && !meal.isLactoseFree);
+        final _isAVeganMeal = !(settings.isVegan && !meal.isVegan);
+        final _isAVegetarianMeal =
+            !(settings.isVegetarian && !meal.isVegetarian);
 
-        return !_isAMealWithoutGluten &&
-            !_isAMealWithoutLactose &&
-            !_isNotAMealVegan &&
-            !_isNotAMealVegetarian;
+        return _isAMealWithGluten &&
+            _isAMealWithLactose &&
+            _isAVeganMeal &&
+            _isAVegetarianMeal;
       }).toList();
     });
   }
