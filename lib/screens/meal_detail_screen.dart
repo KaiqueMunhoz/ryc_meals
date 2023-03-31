@@ -39,35 +39,37 @@ class MealDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(_meal.title),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 300,
-            width: double.infinity,
-            child: Image.network(
-              _meal.imageUrl,
-              fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 300,
+              width: double.infinity,
+              child: Image.network(
+                _meal.imageUrl,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          _createSectionTitle(context, 'Ingredientes'),
-          _createSectionContainer(
-            child: ListView.builder(
-              itemCount: _meal.ingredients.length,
-              itemBuilder: (_, index) {
-                return Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 10,
+            _createSectionTitle(context, 'Ingredientes'),
+            _createSectionContainer(
+              child: ListView.builder(
+                itemCount: _meal.ingredients.length,
+                itemBuilder: (_, index) {
+                  return Card(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 10,
+                      ),
+                      child: Text(_meal.ingredients[index]),
                     ),
-                    child: Text(_meal.ingredients[index]),
-                  ),
-                  color: Theme.of(context).accentColor,
-                );
-              },
+                    color: Theme.of(context).accentColor,
+                  );
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
