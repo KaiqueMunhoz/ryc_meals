@@ -3,9 +3,11 @@ import 'package:ryc_meals/models/meal.dart';
 
 class MealDetailScreen extends StatelessWidget {
   final Function(Meal meal) onToggleFavorite;
+  final bool Function(Meal meal) isFavorite;
 
   const MealDetailScreen(
-    this.onToggleFavorite, {
+    this.onToggleFavorite,
+    this.isFavorite, {
     Key key,
   }) : super(key: key);
 
